@@ -1,7 +1,11 @@
 // import npm packages
+import 'dotenv/config.js'
 import express from 'express'
 import logger from 'morgan'
 import cors from 'cors'
+
+// connect to MongoDB with mongoose
+import './config/database.js'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
