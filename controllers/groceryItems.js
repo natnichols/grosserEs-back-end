@@ -20,6 +20,16 @@ export async function index(req, res) {
   }
 }
 
-export {
+async function deleteGroceryItem(req, res) {
+  try {
+    const groceryItem = await GroceryItem.findByIdAndDelete(req.params.groceryItemId)
+    res.status(200).json(groceryItem)
+  } catch (err) {
+    console.log(`🚨`, err)
+    res.status(500).json(`🚨`, err)
+  }
+}
 
+export {
+  deleteGroceryItem as delete
 }

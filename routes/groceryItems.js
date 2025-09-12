@@ -8,6 +8,8 @@ const router = Router()
 router.post('/', groceryItemsCtrl.create)
 // GET /api/groceryItems
 router.get('/', groceryItemsCtrl.index)
+// DELETE /api/groceryItems/:groceryItemId
+router.delete('/:groceryItemId', groceryItemsCtrl.delete)
 
 export {
   router
