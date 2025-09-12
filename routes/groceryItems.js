@@ -6,6 +6,8 @@ const router = Router()
 // ========== Public Routes ===========
 // POST /api/groceryItems
 router.post('/', groceryItemsCtrl.create)
+// GET /api/groceryItems
+router.get('/', groceryItemsCtrl.index)
 
 export {
   router
