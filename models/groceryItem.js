@@ -5,12 +5,12 @@ const Schema = mongoose.Schema
 const groceryItemSchema = new Schema({
   name: { type: String, required: true },
   amount: { type: String, default: '1' },
+  category: {
+    type: String,
+    default: 'Snacks',
+    enum: ['Produce', 'Dairy', 'Frozen', 'Dry Goods', 'Cleaning Supplies&Home Goods', 'Snacks']
+    }
   // cost: { type: number },
-  // category: {
-    // type: String,
-    // default: 'Snacks'
-    // enum: ['Produce', 'Dairy', 'Frozen', 'Dry Goods', 'Cleaning Supplies', 'Snacks']
-  // }
 },
   { timestamps: true }
 )
